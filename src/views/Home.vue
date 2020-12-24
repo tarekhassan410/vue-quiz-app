@@ -14,10 +14,10 @@
                 id: index + 1,
                 question: questions[index].question,
                 index: index,
-                answers: [
+                answers: shuffleArray([
                   questions[index].correct_answer,
                   ...questions[index].incorrect_answers,
-                ],
+                ]),
                 questions: questions,
                 results: results,
               },
@@ -56,8 +56,12 @@ export default {
           return response.results;
         });
     },
-    async continueToNextQuestion() {
-      console.log("here");
+    shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
     },
   },
   mounted() {
