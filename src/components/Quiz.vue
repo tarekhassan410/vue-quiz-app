@@ -10,7 +10,8 @@
     <div class="container mt-5 border-1">
       <b-card header-tag="header">
         <template #header>
-          <h3 v-html="question" class="mb-0"></h3>
+          <span class="h4"> {{ id }} - </span>
+          <span v-html="question" class="mb-0 h4">{{ id }}</span>
         </template>
         <b-alert show variant="danger" v-show="noAnswerSelected"
           >Please select an answer</b-alert
