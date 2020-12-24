@@ -10,7 +10,7 @@
         v-show="loading"
       ></b-progress>
 
-      <b-table-simple outlined>
+      <b-table-simple outlined responsive>
         <b-thead>
           <b-tr>
             <b-th colspan="4"

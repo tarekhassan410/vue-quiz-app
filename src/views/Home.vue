@@ -49,7 +49,7 @@ export default {
   methods: {
     async fetchData() {
       this.questions = await fetch(
-        "https://opentdb.com/api.php?amount=5&category=18&difficulty=medium&type=multiple"
+        "https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple"
       )
         .then((response) => response.json())
         .then((response) => {
